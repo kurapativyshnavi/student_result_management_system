@@ -70,9 +70,9 @@
                         <td class="text-center">
                             <?php if(isset($_SESSION['login_id'])): ?>
                             <div class="btn-group">
-                                <a href="./index.php?page=edit_result&id=<?php echo $row['id'] ?>" class="btn btn-primary btn-flat">
+                                <button type="button" class="btn btn-primary btn-flat edit_result" data-id="<?php echo $row['id'] ?>">
                                     <i class="fas fa-edit"></i>
-                                </a>
+                                </button>
                                 <button data-id="<?php echo $row['id'] ?>" type="button" class="btn btn-info btn-flat view_result">
                                     <i class="fas fa-eye"></i>
                                 </button>
@@ -132,6 +132,11 @@ $(document).ready(function(){
     // View result
     $('.view_result').click(function(){
         uni_modal("Result Details", "view_result.php?id=" + $(this).attr('data-id'), "mid-large");
+    });
+
+    // Edit result
+    $('.edit_result').click(function(){
+        uni_modal("Edit Result", "edit_result.php?id=" + $(this).attr('data-id'), "large");
     });
 
     // Add this handler for the Add New button

@@ -195,15 +195,6 @@
             <input type="hidden" name="total_marks" value="<?php echo isset($total_marks) ? $total_marks : '' ?>">
           </div>
         </div>
-        
-        <!-- Add Save Button -->
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-6 text-center">
-            <button type="submit" class="btn btn-primary btn-lg px-5">
-              <i class="fa fa-save"></i> Save Result
-            </button>
-          </div>
-        </div>
       </form>
   	</div>
 	</div>
